@@ -1,3 +1,4 @@
-FROM tomcat:9.0.80-jdk17-corretto-al2
+FROM openjdk17-alpine
 EXPOSE 8080
-COPY ./*.war /usr/local/tomcat/webapps
+ADD target/SimpleApp.jar SimpleApp.jar
+ENTRYPOINT ["java", "-jar", "/SimpleApp.jar"]
