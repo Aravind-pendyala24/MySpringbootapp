@@ -35,6 +35,6 @@ jobs:
       uses: docker/setup-qemu-action@v3.0.0
     - name: Docker Image Build
       run: |
-        docker build -t aravinduser12/github-actions-demo:v1
+        sudo docker build -t aravinduser12/github-actions-demo:v1
         
       
