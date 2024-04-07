@@ -39,7 +39,7 @@ jobs:
       
     - name: Docker Image Build
       run: |
-        docker build -t aravinduser12/github-actions-demo:v1
+        docker build -t aravinduser12/github-actions-demo:v1 .
         docker run -d aravinduser12/github-actions-demo:v1
         
       
