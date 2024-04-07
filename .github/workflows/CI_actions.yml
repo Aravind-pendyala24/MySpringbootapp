@@ -1,3 +1,4 @@
+
 # This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
 
@@ -33,8 +34,12 @@ jobs:
 
     - name: Docker Setup QEMU
       uses: docker/setup-qemu-action@v3.0.0
+    - name: Docker Build
+      uses: docker/setup-buildx--action@v3
+      
     - name: Docker Image Build
       run: |
         sudo docker build -t aravinduser12/github-actions-demo:v1
+        docker run -d aravinduser12/github-actions-demo:v1
         
       
